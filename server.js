@@ -47,7 +47,7 @@ app.get("/", function(req, res) {
     // res.send("<h1>hello express</h1>");
     res.render("home.hbs", {
         pageTitle: "Homepage",
-        welcomeMessage: "You lucky bitch"
+        welcomeMessage: "You lucky son of a gun"
     });
 });
 
@@ -62,6 +62,14 @@ app.get("/bad", function(req, res){
         errorMessage: "You failed everything!"
     });
 });
+
+app.get("/projects", function(req, res){
+    res.render("projects.hbs", {
+        pageTitle: "Portfolio Page",
+        welcomeMessage: "Portfolio projects here"
+    });
+});
+
 
 
 app.listen(port, function() {
